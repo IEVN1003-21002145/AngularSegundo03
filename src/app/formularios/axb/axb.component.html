@@ -1,0 +1,15 @@
+<form [formGroup]="formulario">
+    <h2>Multiplicar A por B</h2>
+    <br>
+    <label for="inputA">Ingrese valor para A:</label>
+    <input type="number" id="NumeroFormA" formControlName="NumeroFormA" required>
+    <br>
+    <label for="inputB">Ingrese valor para B:</label>
+    <input type="number" id="NumeroFormB" formControlName="NumeroFormB" required>
+    <br>
+    <br>
+    <button (click)="imprimir()" type="button">Calcular</button>
+    <br>
+    <br>
+    <h3>El resultado de A x B es: {{ resultado }}</h3>
+</form>

@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Calcular distancia entre dos puntos</h2>
+
+    <form [formGroup]="formulario">
+        <label for="x1">x1:</label>
+        <input type="number" id="x1" formControlName="numero1" required>
+
+        <label for="y1">y1:</label>
+        <input type="number" id="y1" formControlName="numero2" required>
+
+        <label for="x2">x2:</label>
+        <input type="number" id="x2" formControlName="numero3" required>
+
+        <label for="y2">y2:</label>
+        <input type="number" id="y2" formControlName="numero4" required>
+
+        <button (click)="multiNumero()" type="submit">CALCULAR</button>
+    </form>
+
+    <div *ngIf="resultado !== null">
+        <p>La distancia entre los dos puntos es: <strong>{{resultado}}</strong></p>
+    </div>
+</div>

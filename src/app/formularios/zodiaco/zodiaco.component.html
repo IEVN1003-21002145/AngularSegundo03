@@ -1,0 +1,55 @@
+<div class="container">
+  <h1 class="espacio" id="titulo">ZODIACO CHINO</h1>
+  
+  <div id="caja">
+    <form class="espacio" [formGroup]="formulario">
+      <!-- Datos personales -->
+      <div class="conV">
+        <br><p>Datos Personales:</p>
+        <label class="espacio" for="nombre">Nombre </label>
+        <input type="text" id="nombre" name="nombre" formControlName="nombre" placeholder="Nombre"><br>
+        
+        <label class="espacio" for="apaterno">A. Paterno </label>
+        <input type="text" id="apaterno" name="apaterno" formControlName="apaterno" placeholder="Apellido Paterno"><br>
+        
+        <label class="espacio" for="amaterno">A. Materno </label>
+        <input type="text" id="amaterno" name="amaterno" formControlName="amaterno" placeholder="Apellido Materno"><br>
+      </div>
+
+      <!-- Fecha de nacimiento -->
+      <div class="conV">
+        <br><p>Fecha de nacimiento</p>
+        <label class="espacio" for="dia">Día</label>
+        <input type="number" id="dia" name="dia" formControlName="dia" min="1" max="31"><br>
+        
+        <label class="espacio" for="mes">Mes</label>
+        <input type="number" id="mes" name="mes" formControlName="mes" min="1" max="12"><br>
+        
+        <label class="espacio" for="anio">Año</label>
+        <input type="number" id="anio" name="anio" formControlName="anio" min="1900"><br>
+      </div>
+
+      <!-- Sexo -->
+      <div>
+        <br><p>Sexo</p>
+        <label class="espacio" for="masculino">
+          <input type="radio" id="masculino" name="sexo" formControlName="sexo" value="masculino"> Masculino
+        </label>
+        <label class="espacio" for="femenino">
+          <input type="radio" id="femenino" name="sexo" formControlName="sexo" value="femenino"> Femenino
+        </label>
+      </div>
+
+      <!-- Botones -->
+      <button class="espacio" id="imp" (click)="imprimir()"  type="button">IMPRIMIR</button>
+    </form>
+
+    <!-- Resultado -->
+    <div class="espacio" id="resultados">
+      <h3>{{resnombre}}</h3>
+      <h3>{{resEdad}}</h3>
+      <h3>{{resSimbolo}}</h3>
+      <img class="espacio" [src]="imgz" style="width: 400px;">
+    </div>
+  </div>
+</div>

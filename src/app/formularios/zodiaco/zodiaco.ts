@@ -52,7 +52,6 @@ export class Zodiaco {
         10: 'caballo',
         11: 'cabra'
       };
-
       const simboloZ = signosZodiaco[residuo as keyof typeof signosZodiaco];
       this.signo = `Tu signo zodiacal chino es: ${simboloZ}`;
       this.imgz = `${simboloZ}.jpg`;
